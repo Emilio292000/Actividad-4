@@ -68,10 +68,12 @@ public class Main {
                     scanner.next();
                 }
             }
+            String mayorOmenor = determinarmayorOmenor(edad);
+
 
             System.out.println("\n == Informacion del Visitante == ");
             System.out.println("Nombre: " + nombre);
-            System.out.println("Edad: " + edad + " años");
+            System.out.println("Edad: " + edad + " años(" + mayorOmenor + ")");
             System.out.println("Tipo de documento: " + Tdocumentos);
             System.out.println("Numero de identificacion: " + identificacion);
             System.out.println("Tiempo de visita registrado: " + horas + " horas.");
@@ -79,7 +81,12 @@ public class Main {
             scanner.close();
 
         }
-
-
+        public static String determinarmayorOmenor(int edad) {
+            if (edad >= 18) {
+                return "Mayor de edad";
+            } else {
+                return "Menor de edad";
+            }
+        }
 
 }
